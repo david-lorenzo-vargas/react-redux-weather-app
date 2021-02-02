@@ -6,7 +6,6 @@
   "scripts": {
     "test": "jest",
     "start": "webpack-dev-server --env.NODE_ENV=development --progress",
-    "server": "nodemon server/index.js",
     "lint": "npm run lint-css && npm run lint-js",
     "lint-js": "npx eslint --ext .jsx --ext .js .",
     "lint-css": "npx stylelint \"**/*.scss\""
