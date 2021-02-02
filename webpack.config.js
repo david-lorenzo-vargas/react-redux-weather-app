@@ -6,7 +6,6 @@ module.exports = ({ NODE_ENV }) => ({
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'assets/js/bundle.js',
-    publicPath: '/',
   },
   module: {
     rules: [
@@ -50,10 +49,7 @@ module.exports = ({ NODE_ENV }) => ({
         test: /\.(png|jpe?g|gif)$/i,
         use: [
           {
-            loader: 'file-loader',
-            options: {
-              outputPath: 'assets/images',
-            },
+            loader: 'url-loader',
           },
         ],
       },
@@ -66,7 +62,7 @@ module.exports = ({ NODE_ENV }) => ({
     },
   },
   devServer: {
-    publicPath: '/',
+    publicPath: '/dist/',
     historyApiFallback: true,
     open: true,
   },
