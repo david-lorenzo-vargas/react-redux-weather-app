@@ -1,8 +1,5 @@
 const path = require('path');
 
-const webpackTemplate = require('./client/webpack/template');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-
 module.exports = ({ NODE_ENV }) => ({
   mode: NODE_ENV,
   entry: './client/app/index.jsx',
@@ -66,7 +63,6 @@ module.exports = ({ NODE_ENV }) => ({
     extensions: ['.js', '.jsx'],
     alias: {
       '@components': path.resolve('./client/app/components'),
-      '@routes': path.resolve('./client/app/routes'),
     },
   },
   devServer: {
@@ -74,9 +70,4 @@ module.exports = ({ NODE_ENV }) => ({
     historyApiFallback: true,
     open: true,
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      templateContent: webpackTemplate,
-    }),
-  ]
 });
