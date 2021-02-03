@@ -27,7 +27,13 @@ const Text = (props) => {
 };
 
 Text.propTypes = {
-  text: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  text: PropTypes.oneOfType(
+    [
+    PropTypes.string,
+    PropTypes.number,
+    PropTypes.func
+  ]
+  ),
   size: PropTypes.string,
   color: PropTypes.string,
   uppercase: PropTypes.bool,
