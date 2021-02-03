@@ -20,7 +20,7 @@ const Header = (props) => {
             <Time time={currentTime} />
           </Column>
           <Column>
-            <Text text={`${temperature}°`} size="large" color="white" />
+            <Text text={`${temperature}°C`} size="large" color="white" />
           </Column>
         </Row>
       </Column>
