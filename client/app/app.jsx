@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from './reset.scss';
-import { Page } from '@components';
+import WeatherAppContainer from './container';
 
 const App = () => (
   <div className={styles}>
-    <Page />
+    <WeatherAppContainer />
   </div>
 );
 
