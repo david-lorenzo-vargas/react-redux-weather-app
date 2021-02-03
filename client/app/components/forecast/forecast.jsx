@@ -4,34 +4,24 @@ import styles from './forecast.scss';
 import { ForecastItem } from '@components';
 
 const Forecast = (props) => {
-  const {} = props;
+  const { weekForecast, icon } = props;
 
-  const weekdForecast = [
-    {
-      day: 'Mon',
-      temperature: '12C',
-    },
-    {
-      day: 'Tue',
-      temperature: '15C',
-    },
-    {
-      day: 'Wed',
-      temperature: '20C',
-    },
-    {
-      day: 'Thu',
-      temperature: '22C',
-    },
-    {
-      day: 'Fri',
-      temperature: '19C',
-    },
-  ];
+  const weekDays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'];
+
+  const hasData = weekForecast && !!weekForecast.length
 
   return (
     <div className={styles['forecast']}>
-      <ForecastItem week={weekdForecast} />
+      {hasData && (
+        weekForecast.map((day, index) => (
+          <ForecastItem
+            key={index}
+            day={weekDays[index]}
+            temperature={day.main.temp}
+            icon={icon}
+          />
+        ))
+      )}
     </div>
   );
 };
