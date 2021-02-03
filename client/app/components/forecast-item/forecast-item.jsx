@@ -10,8 +10,9 @@ const ForecastItem = (props) => {
   return (
     <div className={styles['body-item']}>
       {week.map((day) => (
-        <Row between>
-          <Column>
+        <div className={styles['body__item']}>
+          <Row between>
+          <Column grow>
             <Row between>
               <Column>
                 <Text text={day.day} color="white" size="medium" />
@@ -25,6 +26,7 @@ const ForecastItem = (props) => {
             <Icon name={day.weather} />
           </Column>
         </Row>
+        </div>
       ))}
     </div>
   );
