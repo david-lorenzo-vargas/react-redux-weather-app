@@ -6,7 +6,7 @@ import WeatherAppContainer from './container';
 import store from './state';
 
 const App = () => (
-  <div className={styles}>
+  <div className={styles['app']}>
     <Provider store={store}>
       <WeatherAppContainer />
     </Provider>
