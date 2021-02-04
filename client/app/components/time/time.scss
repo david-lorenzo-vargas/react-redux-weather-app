@@ -1,4 +1,8 @@
 .time-box {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%);
   border-radius: 5px;
   border: 1px solid rgb(34, 34, 34);
   padding: 15px 5px;
