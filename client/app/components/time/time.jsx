@@ -13,7 +13,7 @@ const Time = () => (
         </Column>
         <Column>
           <Clock
-            format={'HH:mm:ss'}
+            format={'HH:mm'}
             ticking={true}
             timezone={'Etc/GMT0'}
             className={styles['time-box__clock']}
