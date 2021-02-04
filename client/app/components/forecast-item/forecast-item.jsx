@@ -14,7 +14,7 @@ const ForecastItem = (props) => {
     <div className={styles['weather-container']}>
       <div className={styles['weather-container__item']}>
         <Row between>
-          <Column>
+          <Column grow>
             <div className={styles['weather']}>
               <Row between>
                 <Column>
@@ -37,7 +37,11 @@ const ForecastItem = (props) => {
               </Row>
             </div>
           </Column>
-          <Icon name={icon} />
+          <Column shrink>
+            <div className={styles['icon']}>
+              <Icon name={icon} />
+            </div>
+          </Column>
         </Row>
       </div>
     </div>
