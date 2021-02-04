@@ -12,6 +12,7 @@ const Text = (props) => {
     size,
     color,
     uppercase,
+    margin,
   } = props;
 
   return (
@@ -19,6 +20,7 @@ const Text = (props) => {
       [`text--size-${size}`]: size,
       [`text--color-${color}`]: color,
       'text--uppercase': uppercase,
+      'text--margin': margin,
     })}
     >
       {text}
@@ -31,6 +33,7 @@ Text.propTypes = {
   size: PropTypes.string,
   color: PropTypes.string,
   uppercase: PropTypes.bool,
+  margin: PropTypes.bool,
 };
 
 export default Text;
