@@ -7,25 +7,26 @@ import ProgressBar from '../progress-bar';
 import { Row, Column, Time } from '@components';
 
 const Header = (props) => {
-  const { temperature, timeLeft, width, currentTime } = props;
+  const { temperature, city, countdown, width, currentTime } = props;
+
 
   return (
     <div className={styles['header']}>
       <Column>
         <Row between>
           <Column>
-            <Text text="London" size="large" color="white" />
+            <Text text={city} size="large" color="white" />
           </Column>
           <Column>
             <Time time={currentTime} />
           </Column>
           <Column>
-            <Text text={`${temperature}°C`} size="large" color="white" />
+            <Text text={`${temperature.temp} °C`} size="large" color="white" />
           </Column>
         </Row>
       </Column>
       <Column>
-        <Text text={`reloading in ${timeLeft}s`} size="small" color="white" />
+        <Text text={`reloading in ${countdown}s`} size="small" color="white" />
         <ProgressBar width={width} />
       </Column>
     </div>
@@ -33,7 +34,7 @@ const Header = (props) => {
 };
 
 Header.propTypes = {
-  temperature: PropTypes.number,
+  temperature: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   timeLeft: PropTypes.number,
   width: PropTypes.number,
 };
