@@ -4,10 +4,11 @@ import styles from './header.scss';
 
 import Text from '../text';
 import ProgressBar from '../progress-bar';
+import { roundNumbers } from '../../utilities/round-numbers';
 import { Row, Column, Time } from '@components';
 
 const Header = (props) => {
-  const { temperature, city, countdown, width, currentTime } = props;
+  const { temperature, city, countdown, width } = props;
 
 
   return (
@@ -18,10 +19,10 @@ const Header = (props) => {
             <Text text={city} size="large" color="white" />
           </Column>
           <Column>
-            <Time time={currentTime} />
+            <Time />
           </Column>
           <Column>
-            <Text text={`${temperature.temp} °C`} size="large" color="white" />
+            <Text text={`${roundNumbers(temperature.temp)} °C`} size="medium" color="white" />
           </Column>
         </Row>
       </Column>
