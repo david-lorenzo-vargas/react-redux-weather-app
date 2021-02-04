@@ -8,7 +8,7 @@ const Icon = (props) => {
 
   return (
     <div className={styles['icon']}>
-      <img src={name} />
+      <img src={`http://openweathermap.org/img/wn/${name}.png`} />
     </div>
   )
 };
