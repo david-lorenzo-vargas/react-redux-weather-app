@@ -2,10 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './header.scss';
 
-import Text from '../text';
-import ProgressBar from '../progress-bar';
 import { roundNumbers } from '../../utilities/round-numbers';
-import { Row, Column, Time } from '@components';
+import { Row, Column, Time, Text, ProgressBar } from '@components';
 
 const Header = (props) => {
   const { temperature, city, countdown, width } = props;
