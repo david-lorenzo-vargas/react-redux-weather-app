@@ -14,27 +14,37 @@ const WeatherAppContainer = (props) => {
     currentForecast,
   } = state;
 
-  const [seconds, setCountdown] = useState(60);
+  const [countdown, setCountdown] = useState({seconds: 60});
 
   const minuteCountdown = () => {
     setInterval(() => {
-      setCountdown( seconds -1)
+      if (countdown.seconds !== 0) {
+        setCountdown({
+          seconds: countdown.seconds -1,
+        });
+      }
+      if (countdown.secconds === 0) {
+        setCountdown({
+          seconds: 60,
+        });
+      }
     }, 1000);
   };
 
-  // console.log(seconds)
+  console.log(countdown.seconds)
 
   const timer = () => {
     setInterval(() => {
       actions.fetchFiveDayForecast();
       actions.fetchCurrentForecast();
     }, 1000 * 60);
-  }
+  };
 
   useEffect(() => {
+    timer();
+    minuteCountdown();
     actions.fetchFiveDayForecast();
     actions.fetchCurrentForecast();
-    timer();
   }, []);
 
   return (
@@ -43,6 +53,7 @@ const WeatherAppContainer = (props) => {
       fiveDayForecast={fiveDayForecast}
       fetchFiveDayStatus={fetchFiveDayStatus}
       fetchCurrentStatus={fetchCurrentStatus}
+      countdown={countdown.seconds}
     />
   );
 };
