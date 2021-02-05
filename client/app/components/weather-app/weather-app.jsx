@@ -8,6 +8,7 @@ const WeatherApp = (props) => {
     currentForecast,
     fetchCurrentStatus,
     countdown,
+    width,
   } = props;
 
   const fiveDayHasData = fiveDayForecast && fetchFiveDayStatus === 'success' && !!fiveDayForecast.list.length;
@@ -20,6 +21,7 @@ const WeatherApp = (props) => {
         temperature={currentHasData? currentForecast.main : ''}
         city={currentHasData? currentForecast.name : ''}
         countdown={countdown}
+        width={width}
       />
       <Forecast
         weekForecast={fiveDayHasData? fiveDayForecast.list : []}
