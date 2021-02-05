@@ -6,7 +6,7 @@ import { roundNumbers } from '../../utilities/round-numbers';
 import { Row, Column, Time, Text, ProgressBar } from '@components';
 
 const Header = (props) => {
-  const { temperature, city, countdown, width } = props;
+  const { temperature, city, countdown } = props;
 
 
   return (
@@ -26,7 +26,7 @@ const Header = (props) => {
       </Column>
       <Column>
         <Text text={`reloading in ${countdown}s`} size="small" color="white" />
-        <ProgressBar width={width} />
+        <ProgressBar width={countdown} />
       </Column>
     </div>
   );
