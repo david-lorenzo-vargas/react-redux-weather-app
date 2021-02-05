@@ -1,17 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { ProgressBarItem } from '@components'
 import styles from './progress-bar.scss';
 
 const ProgressBar = (props) => {
   const { width } = props;
 
-  const barWidth = {
-    width: `${width}%`,
-  };
-
   return (
     <div className={styles['progress-bar']}>
-      <div className={styles['progress-bar__item']} style={barWidth} />
+      <ProgressBarItem width={width} />
     </div>
   );
 };
