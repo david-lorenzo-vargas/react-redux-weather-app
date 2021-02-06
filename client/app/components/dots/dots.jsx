@@ -8,21 +8,21 @@ import styles from './dots.scss';
 const cx = classnames.bind(styles);
 
 const Dots = (props) => {
-  const { number } = props;
+  const { dots } = props;
 
   return (
     <div className={styles['dots']}>
       <Row between>
         <div className={cx('dot', {
-          [`dot--number-${number[0]}`]: number,
+          [`dot--number-${dots[0]}`]: number,
         })}
         />
         <div className={cx('dot', {
-          [`dot--number-${number[1]}`]: number,
+          [`dot--number-${dots[1]}`]: number,
         })}
         />
         <div className={cx('dot', {
-          [`dot--number-${number[2]}`]: number,
+          [`dot--number-${dots[2]}`]: number,
         })}
         />
       </Row>
