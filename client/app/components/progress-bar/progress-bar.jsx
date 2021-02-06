@@ -4,11 +4,11 @@ import { ProgressBarItem } from '@components'
 import styles from './progress-bar.scss';
 
 const ProgressBar = (props) => {
-  const { width } = props;
+  const { countdown } = props;
 
   return (
     <div className={styles['progress-bar']}>
-      <ProgressBarItem width={width} />
+      <ProgressBarItem seconds={countdown} />
     </div>
   );
 };
