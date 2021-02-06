@@ -14,15 +14,15 @@ const Dots = (props) => {
     <div className={styles['dots']}>
       <Row between>
         <div className={cx('dot', {
-          [`dot--number-${dots[0]}`]: number,
+          [`dot--number-${dots[0]}`]: dots,
         })}
         />
         <div className={cx('dot', {
-          [`dot--number-${dots[1]}`]: number,
+          [`dot--number-${dots[1]}`]: dots,
         })}
         />
         <div className={cx('dot', {
-          [`dot--number-${dots[2]}`]: number,
+          [`dot--number-${dots[2]}`]: dots,
         })}
         />
       </Row>
