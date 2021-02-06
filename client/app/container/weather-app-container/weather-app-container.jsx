@@ -9,9 +9,9 @@ const WeatherAppContainer = (props) => {
   const { state, actions } = props;
   const {
     fetchFiveDayStatus,
-    fetchCurrentStatus,
+    fetchCurrentWeatherStatus,
     fiveDayForecast,
-    currentForecast,
+    currentWeather,
   } = state;
 
   const [countdown, setCountdown] = useState(60);
@@ -23,7 +23,7 @@ const WeatherAppContainer = (props) => {
       }
 
       actions.fetchFiveDayForecast();
-      actions.fetchCurrentForecast();
+      actions.fetchCurrentWeather();
       return 60;
     });
   };
@@ -37,7 +37,7 @@ const WeatherAppContainer = (props) => {
   useEffect(() => {
     const intervalId = startCountdown();
     actions.fetchFiveDayForecast();
-    actions.fetchCurrentForecast();
+    actions.fetchCurrentWeather();
 
     return () => {
       clearInterval(intervalId);
@@ -48,10 +48,10 @@ const WeatherAppContainer = (props) => {
 
   return (
     <WeatherApp
-      currentForecast={currentForecast}
+      currentWeather={currentWeather}
       fiveDayForecast={fiveDayForecast}
       fetchFiveDayStatus={fetchFiveDayStatus}
-      fetchCurrentStatus={fetchCurrentStatus}
+      fetchCurrentWeatherStatus={fetchCurrentWeatherStatus}
       countdown={countdown}
     />
   );
