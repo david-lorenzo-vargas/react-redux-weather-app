@@ -32,6 +32,7 @@ const ForecastItem = (props) => {
                     color="white"
                     size="large"
                     margin
+                    type="temperature"
                   />
                 </Column>
               </Row>
