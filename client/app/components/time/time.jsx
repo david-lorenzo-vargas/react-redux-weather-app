@@ -8,7 +8,7 @@ const Time = () => (
     <div className={styles['time-box']}>
       <Row between>
         <Column>
-          <Dots number={['three', 'two', 'one']} />
+          <Dots dots={['three', 'two', 'one']} />
         </Column>
         <Column>
           <Clock
@@ -22,7 +22,7 @@ const Time = () => (
           <Text text="gmt" uppercase color="white" size="medium" />
         </Column>
         <Column>
-          <Dots number={['one', 'two', 'three']} />
+          <Dots dots={['one', 'two', 'three']} />
         </Column>
       </Row>
     </div>
