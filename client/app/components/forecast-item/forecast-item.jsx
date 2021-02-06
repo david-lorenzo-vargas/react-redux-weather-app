@@ -62,6 +62,7 @@ ForecastItem.propTypes = {
   timestamp: PropTypes.number,
   temperature: PropTypes.number,
   icon: PropTypes.string,
-}
+  countdown: PropTypes.number,
+};
 
 export default ForecastItem;
