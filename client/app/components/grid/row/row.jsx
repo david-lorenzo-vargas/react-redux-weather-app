@@ -29,6 +29,8 @@ const Row = (props) => {
 Row.propTypes = {
   children: PropTypes.node,
   direction: PropTypes.string,
+  center: PropTypes.string,
+  between: PropTypes.string,
 };
 
 Row.defaultProps = {
