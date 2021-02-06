@@ -1,11 +1,11 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as actions from './state/actions';
 
 import { WeatherApp } from '@components';
 
-const WeatherAppContainer = ({state, actions }) => {
+const WeatherAppContainer = ({ state, actions }) => {
   const {
     fetchFiveDayStatus,
     fetchCurrentWeatherStatus,
@@ -42,8 +42,6 @@ const WeatherAppContainer = ({state, actions }) => {
       clearInterval(intervalId);
     };
   }, []);
-
-
 
   return (
     <WeatherApp
