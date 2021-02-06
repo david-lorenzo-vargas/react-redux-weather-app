@@ -6,17 +6,15 @@ import styles from './text.scss';
 
 const cx = classnames.bind(styles);
 
-const Text = (props) => {
-  const {
-    text,
-    size,
-    color,
-    uppercase,
-    margin,
-    type,
-    countdown
-  } = props;
-
+const Text = ({
+  text,
+  size,
+  color,
+  uppercase,
+  margin,
+  type,
+  countdown,
+}) => {
   const textAnimated = type === 'temperature' || type === 'day' && countdown === 60;
 
   return (
