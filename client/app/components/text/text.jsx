@@ -38,6 +38,7 @@ Text.propTypes = {
   uppercase: PropTypes.bool,
   margin: PropTypes.bool,
   type: PropTypes.string,
+  countdown: PropTypes.number,
 };
 
 export default Text;
