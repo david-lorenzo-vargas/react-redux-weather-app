@@ -7,7 +7,7 @@ import styles from './dots.scss';
 
 const cx = classnames.bind(styles);
 
-const Dots = ({dots}) => (
+const Dots = ({ dots }) => (
   <div className={styles['dots']}>
     <Row between>
       <div className={cx('dot', {
@@ -27,7 +27,7 @@ const Dots = ({dots}) => (
 );
 
 Dots.propTypes = {
-  number: PropTypes.arrayOf(PropTypes.string),
+  dots: PropTypes.arrayOf(PropTypes.string),
 };
 
 export default Dots;
