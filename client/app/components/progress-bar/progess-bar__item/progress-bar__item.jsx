@@ -4,15 +4,15 @@ import styles from './progress-bar__item.scss';
 const ProgressBarItem = (props) => {
   const { seconds } = props;
 
-  const getWidth = () => {
-    const step = 1;
-    const time = 60;
-    const percentage = (100 * step) / time;
-    const count = time - seconds;
-    const width = count * percentage;
+  // const getWidth = () => {
+  //   const step = 1;
+  //   const time = 60;
+  //   const percentage = (100 * step) / time;
+  //   const count = time - seconds;
+  //   const width = count * percentage;
 
-    return width;
-  };
+  //   return width;
+  // };
 
   // const barWidth = {
   //   width: `${getWidth()}%`,
