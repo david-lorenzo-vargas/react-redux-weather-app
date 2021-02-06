@@ -8,7 +8,6 @@ import { Row, Column, Time, Text, ProgressBar } from '@components';
 const Header = (props) => {
   const { temperature, city, countdown } = props;
 
-
   return (
     <div className={styles['header']}>
       <Column>
@@ -34,8 +33,8 @@ const Header = (props) => {
 
 Header.propTypes = {
   temperature: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-  timeLeft: PropTypes.number,
-  width: PropTypes.number,
+  city: PropTypes.string,
+  countdown: PropTypes.number,
 };
 
 export default Header;
