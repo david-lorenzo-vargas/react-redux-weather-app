@@ -24,6 +24,7 @@ const WeatherApp = (props) => {
       />
       <Forecast
         weekForecast={fiveDayHasData? fiveDayForecast.list : []}
+        countdown={countdown}
       />
     </>
   )
