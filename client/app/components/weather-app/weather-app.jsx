@@ -16,24 +16,24 @@ const WeatherApp = ({
   return (
     <>
       <Header
-        temperature={currentHasData? currentWeather.main : ''}
-        city={currentHasData? currentWeather.name : ''}
+        temperature={currentHasData ? currentWeather.main : ''}
+        city={currentHasData ? currentWeather.name : ''}
         countdown={countdown}
       />
       <Forecast
-        weekForecast={fiveDayHasData? fiveDayForecast.list : []}
+        weekForecast={fiveDayHasData ? fiveDayForecast.list : []}
         countdown={countdown}
       />
     </>
-  )
+  );
 };
 
 WeatherApp.propTypes = {
   fiveDayForecast: PropTypes.object,
   fetchFiveDayStatus: PropTypes.string,
-  currentForecast: PropTypes.object,
-  fetchCurrentStatus: PropTypes.string,
+  currentWeather: PropTypes.object,
+  fetchCurrentWeatherStatus: PropTypes.string,
   countdown: PropTypes.number,
-}
+};
 
 export default WeatherApp;
