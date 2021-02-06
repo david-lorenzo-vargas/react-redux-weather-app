@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './progress-bar.scss';
 
 const getWidth = (countdown) => {
@@ -23,5 +24,8 @@ const ProgressBar = ({countdown}) => {
   );
 };
 
+ProgressBar.propTypes ={
+  countdown: PropTypes.number,
+};
 
 export default ProgressBar;
