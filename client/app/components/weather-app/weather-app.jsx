@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Header, Forecast } from '@components';
 
 const WeatherApp = (props) => {
@@ -27,5 +28,13 @@ const WeatherApp = (props) => {
     </>
   )
 };
+
+WeatherApp.propTypes = {
+  fiveDayForecast: PropTypes.object,
+  fetchFiveDayStatus: PropTypes.string,
+  currentForecast: PropTypes.object,
+  fetchCurrentStatus: PropTypes.string,
+  countdown: PropTypes.number,
+}
 
 export default WeatherApp;
