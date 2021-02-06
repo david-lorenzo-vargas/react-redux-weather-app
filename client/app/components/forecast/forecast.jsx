@@ -18,7 +18,7 @@ const weekReduce = (weekForecast) => {
 };
 
 const Forecast = (props) => {
-  const { weekForecast } = props;
+  const { weekForecast, countdown } = props;
 
   const hasData = weekForecast && !!weekForecast.length;
 
@@ -32,6 +32,7 @@ const Forecast = (props) => {
           timestamp={item.dt}
           temperature={item.main.temp}
           icon={item.weather[0].icon}
+          countdown={countdown}
         />
       ))}
     </div>
