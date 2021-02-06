@@ -6,20 +6,20 @@ const WeatherApp = (props) => {
   const {
     fiveDayForecast,
     fetchFiveDayStatus,
-    currentForecast,
-    fetchCurrentStatus,
+    currentWeather,
+    fetchCurrentWeatherStatus,
     countdown,
   } = props;
 
   const fiveDayHasData = fiveDayForecast && fetchFiveDayStatus === 'success' && !!fiveDayForecast.list.length;
 
-  const currentHasData = currentForecast && fetchCurrentStatus === 'success';
+  const currentHasData = currentWeather && fetchCurrentWeatherStatus === 'success';
 
   return (
     <>
       <Header
-        temperature={currentHasData? currentForecast.main : ''}
-        city={currentHasData? currentForecast.name : ''}
+        temperature={currentHasData? currentWeather.main : ''}
+        city={currentHasData? currentWeather.name : ''}
         countdown={countdown}
       />
       <Forecast
