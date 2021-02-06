@@ -14,7 +14,7 @@ const ProgressBar = (props) => {
 };
 
 ProgressBar.propTypes = {
-  width: PropTypes.number,
+  countdown: PropTypes.number,
 };
 
 export default ProgressBar;
