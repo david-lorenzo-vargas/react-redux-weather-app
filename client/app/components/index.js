@@ -5,6 +5,6 @@ export { default as ForecastItem } from './forecast-item';
 export { default as Dots } from './dots';
 export { default as Header } from './header';
 export { default as WeatherApp } from './weather-app';
-export { ProgressBar, ProgressBarItem } from './progress-bar';
+export { default as ProgressBar } from './progress-bar';
 export { default as Time } from './time';
 export { default as Icon } from './icon';
