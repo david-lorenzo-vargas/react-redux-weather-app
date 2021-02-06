@@ -5,8 +5,7 @@ import * as actions from './state/actions';
 
 import { WeatherApp } from '@components';
 
-const WeatherAppContainer = (props) => {
-  const { state, actions } = props;
+const WeatherAppContainer = ({state, actions }) => {
   const {
     fetchFiveDayStatus,
     fetchCurrentWeatherStatus,
