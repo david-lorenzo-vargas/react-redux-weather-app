@@ -14,7 +14,10 @@ const Text = (props) => {
     uppercase,
     margin,
     type,
+    countdown
   } = props;
+
+  const textAnimated = type === 'temperature' || type === 'day' && countdown === 60;
 
   return (
     <span className={cx('text', {
@@ -22,7 +25,7 @@ const Text = (props) => {
       [`text--color-${color}`]: color,
       'text--uppercase': uppercase,
       'text--margin': margin,
-      'text--animated': type === 'temperature' || type === 'day',
+      'text--animated': textAnimated,
     })}
     >
       {text}
