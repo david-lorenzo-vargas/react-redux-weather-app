@@ -1,4 +1,5 @@
 import React from 'react';
+import classnames from 'classnames/bind';
 import PropTypes from 'prop-types';
 import { getDay } from '../../utilities/get-day';
 import { roundNumbers } from '../../utilities/round-numbers';
@@ -7,12 +8,16 @@ import { Row, Column, Text, Icon } from '@components';
 
 import styles from './forecast-item.scss';
 
+const cx = classnames.bind(styles);
+
 const ForecastItem = (props) => {
-  const { timestamp, temperature, icon } = props;
+  const { timestamp, temperature, icon, countdown } = props;
 
   return (
     <div className={styles['weather-container']}>
-      <div className={styles['weather-container__item']}>
+      <div className={cx('weather-container__item', {
+        'weather-container__item--animated': countdown === 60,
+      })}>
         <Row between>
           <Column grow>
             <div className={styles['weather']}>
@@ -25,6 +30,7 @@ const ForecastItem = (props) => {
                     uppercase
                     margin
                     type="day"
+                    countdown={countdown}
                   />
                 </Column>
                 <Column>
@@ -34,6 +40,7 @@ const ForecastItem = (props) => {
                     size="large"
                     margin
                     type="temperature"
+                    countdown={countdown}
                   />
                 </Column>
               </Row>
@@ -41,7 +48,7 @@ const ForecastItem = (props) => {
           </Column>
           <Column shrink>
             <div className={styles['icon']}>
-              <Icon icon={icon} />
+              <Icon icon={icon} countdown={countdown} />
             </div>
           </Column>
         </Row>
