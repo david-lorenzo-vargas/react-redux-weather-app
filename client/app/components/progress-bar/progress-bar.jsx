@@ -1,11 +1,27 @@
 import React from 'react';
-import { ProgressBarItem } from '@components'
 import styles from './progress-bar.scss';
 
-const ProgressBar = () => (
-  <div className={styles['progress-bar']}>
-    <ProgressBarItem />
-  </div>
-);
+const getWidth = (countdown) => {
+  const step = 1;
+  const time = 60;
+  const percentage = (100 * step) / time;
+  const count = time - countdown;
+  const width = count * percentage;
+
+  return width;
+};
+
+const ProgressBar = ({countdown}) => {
+  const barWidth = {
+    width: `${getWidth(countdown)}%`,
+  };
+
+  return (
+    <div className={styles['progress-bar']}>
+      <div className={styles['progress-bar__item']} style={barWidth}/>
+    </div>
+  );
+};
+
 
 export default ProgressBar;
