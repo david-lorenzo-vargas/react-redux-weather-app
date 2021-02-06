@@ -6,17 +6,13 @@ import styles from './icon.scss';
 
 const cx = classnames.bind(styles);
 
-const Icon = (props) => {
-  const {icon, countdown } = props;
-
-  return (
-    <div className={cx('icon', {
-      'icon--animated': countdown === 60,
-    })}>
-      <img src={`http://openweathermap.org/img/wn/${icon}.png`} />
-    </div>
-  )
-};
+const Icon = ({icon, countdown}) => (
+  <div className={cx('icon', {
+    'icon--animated': countdown === 60,
+  })}>
+    <img src={`http://openweathermap.org/img/wn/${icon}.png`} />
+  </div>
+);
 
 Icon.propTypes = {
   name: PropTypes.string,
