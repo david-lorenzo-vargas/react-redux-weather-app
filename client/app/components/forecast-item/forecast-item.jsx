@@ -41,7 +41,7 @@ const ForecastItem = (props) => {
           </Column>
           <Column shrink>
             <div className={styles['icon']}>
-              <Icon name={icon} />
+              <Icon icon={icon} />
             </div>
           </Column>
         </Row>
