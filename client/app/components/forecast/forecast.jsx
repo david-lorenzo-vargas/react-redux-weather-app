@@ -5,19 +5,17 @@ import styles from './forecast.scss';
 
 import { ForecastItem } from '@components';
 
-const weekReduce = (weekForecast) => {
-  return weekForecast.reduce((acc, currentValue) => {
-    if (acc.length !== 0 ) {
-      if (getDay(acc[acc.length -1].dt) === getDay(currentValue.dt)) {
-        return acc;
-      }
+const weekReduce = (weekForecast) => weekForecast.reduce((acc, currentValue) => {
+  if (acc.length !== 0) {
+    if (getDay(acc[acc.length - 1].dt) === getDay(currentValue.dt)) {
+      return acc;
     }
-    acc = [...acc, currentValue];
-    return acc;
-  }, []);
-};
+  }
+  acc = [...acc, currentValue];
+  return acc;
+}, []);
 
-const Forecast = ({weekForecast, countdown}) => {
+const Forecast = ({ weekForecast, countdown }) => {
   const hasData = weekForecast && !!weekForecast.length;
 
   const weekDays = hasData ? weekReduce(weekForecast) : [];
@@ -39,6 +37,7 @@ const Forecast = ({weekForecast, countdown}) => {
 
 Forecast.propTypes = {
   weekForecast: PropTypes.arrayOf(PropTypes.object),
+  countdown: PropTypes.number,
 };
 
 export default Forecast;
