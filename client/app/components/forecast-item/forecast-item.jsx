@@ -24,6 +24,7 @@ const ForecastItem = (props) => {
                     size="large"
                     uppercase
                     margin
+                    type="day"
                   />
                 </Column>
                 <Column>
