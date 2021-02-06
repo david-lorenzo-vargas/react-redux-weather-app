@@ -25,7 +25,7 @@ const Header = (props) => {
       </Column>
       <Column>
         <Text text={`reloading in ${countdown}s`} size="small" color="white" />
-        <ProgressBar countdown={countdown} />
+        <ProgressBar />
       </Column>
     </div>
   );
