@@ -31,11 +31,11 @@ export const fetchCurrentWeatherDataReject = () => ({
 });
 
 export const fetchFiveDayForecast = (payload) => (dispatch) => {
-  fetchFiveDayForecastDataPending()
+  fetchFiveDayForecastDataPending();
   fetchFiveDayForecastData(payload)
     .then(response => response.json())
     .then(data => dispatch(fetchFiveDayForecastDataSuccess(data)))
-    .catch((e) => dispatch(fetchFiveDayForecastDataReject(e)))
+    .catch((e) => dispatch(fetchFiveDayForecastDataReject(e)));
 };
 
 export const fetchCurrentWeather = (payload) => (dispatch) => {
@@ -43,5 +43,5 @@ export const fetchCurrentWeather = (payload) => (dispatch) => {
   fetchCurrentWeatherData(payload)
   .then(response => response.json())
   .then(data => dispatch(fetchCurrentWeatherDataSuccess(data)))
-  .catch((e) => dispatch(fetchCurrentWeatherDataReject(e)))
+  .catch((e) => dispatch(fetchCurrentWeatherDataReject(e)));
 };
