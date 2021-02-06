@@ -3,9 +3,9 @@ import { createReducer } from '../../../state/utilities';
 
 const initialState = {
   fetchFiveDayStatus: '',
-  fetchCurrentStatus: '',
+  fetchCurrentWeatherStatus: '',
   fiveDayForecast: undefined,
-  currentForecast: undefined,
+  currentWeather: undefined,
 };
 
 const fetchFiveDayForecastDataSuccess  = (state, payload) => {
@@ -15,10 +15,10 @@ const fetchFiveDayForecastDataSuccess  = (state, payload) => {
   }
 };
 
-const fetchCurrentForecastDataSuccess = (state, payload) => {
+const fetchCurrentWeatherDataSuccess = (state, payload) => {
   return {
-    fetchCurrentStatus: 'success',
-    currentForecast: payload,
+    fetchCurrentWeatherStatus: 'success',
+    currentWeather: payload,
   }
 };
 
@@ -28,9 +28,9 @@ const fetchFiveDayForecastDataPending = (state) => {
   }
 };
 
-const fetcCurrentForecastPending = (state) => {
+const fetcCurrentWeatherPending = (state) => {
   return {
-    fetchCurrentStatus: 'pending',
+    fetchCurrentWeatherStatus: 'pending',
   }
 };
 
@@ -40,20 +40,19 @@ const fetchFiveDayForecastDataReject = (state) => {
   }
 };
 
-const fetchCurrentForecastDataReject = (state) => {
+const fetchCurrentWeatherDataReject = (state) => {
   return {
-    fetchCurrentStatus: 'reject',
+    fetchCurrentWeatherStatus: 'reject',
   }
 };
-
 
 const atoms = {
   [CONSTANTS.FETCH_FIVE_DAY_DATA_SUCCESS]: fetchFiveDayForecastDataSuccess,
   [CONSTANTS.FETCH_FIVE_DAY_DATA_PENDING]: fetchFiveDayForecastDataPending,
   [CONSTANTS.FETCH_FIVE_DAY_DATA_REJECT]: fetchFiveDayForecastDataReject,
-  [CONSTANTS.FETCH_CURRENT_FORECAST_DATA_SUCCESS]: fetchCurrentForecastDataSuccess,
-  [CONSTANTS.FETCH_CURRENT_FORECAST_DATA_PENDING]: fetcCurrentForecastPending,
-  [CONSTANTS.FETCH_CURRENT_FORECAST_DATA_REJECT]: fetchCurrentForecastDataReject,
+  [CONSTANTS.FETCH_CURRENT_WEATHER_DATA_SUCCESS]: fetchCurrentWeatherDataSuccess,
+  [CONSTANTS.FETCH_CURRENT_WEATHER_DATA_PENDING]: fetcCurrentWeatherPending,
+  [CONSTANTS.FETCH_CURRENT_WEATHER_DATA_REJECT]: fetchCurrentWeatherDataReject,
 };
 
 const reducer = createReducer({
