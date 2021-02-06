@@ -8,7 +8,7 @@ const initialState = {
   currentWeather: undefined,
 };
 
-const fetchFiveDayForecastDataSuccess  = (state, payload) => {
+const fetchFiveDayForecastDataSuccess = (state, payload) => {
   return {
     fetchFiveDayStatus: 'success',
     fiveDayForecast: payload,
@@ -56,7 +56,7 @@ const atoms = {
 };
 
 const reducer = createReducer({
-  initialState, atoms
+  initialState, atoms,
 });
 
 export default reducer;
