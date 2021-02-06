@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { getDay } from '../../utilities/get-day';
 import styles from './forecast.scss';
 
@@ -17,7 +18,7 @@ const weekReduce = (weekForecast) => {
 };
 
 const Forecast = (props) => {
-  const { weekForecast, icon } = props;
+  const { weekForecast } = props;
 
   const hasData = weekForecast && !!weekForecast.length;
 
@@ -35,6 +36,10 @@ const Forecast = (props) => {
       ))}
     </div>
   );
+};
+
+Forecast.propTypes = {
+  weekForecast: PropTypes.arrayOf(PropTypes.object),
 };
 
 export default Forecast;
