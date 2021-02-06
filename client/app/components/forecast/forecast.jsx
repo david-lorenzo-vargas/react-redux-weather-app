@@ -17,9 +17,7 @@ const weekReduce = (weekForecast) => {
   }, []);
 };
 
-const Forecast = (props) => {
-  const { weekForecast, countdown } = props;
-
+const Forecast = ({weekForecast, countdown}) => {
   const hasData = weekForecast && !!weekForecast.length;
 
   const weekDays = hasData ? weekReduce(weekForecast) : [];
