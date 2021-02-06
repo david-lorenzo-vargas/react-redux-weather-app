@@ -14,17 +14,17 @@ const WeatherAppContainer = (props) => {
     currentForecast,
   } = state;
 
-  const [countdown, setCountdown] = useState(59);
+  const [countdown, setCountdown] = useState(60);
 
   const handleInterval = () => {
     setCountdown((stateCountdown) => {
-      if (stateCountdown !== 0) {
+      if (stateCountdown !== 1) {
         return stateCountdown - 1;
       }
 
       actions.fetchFiveDayForecast();
       actions.fetchCurrentForecast();
-      return 59;
+      return 60;
     });
   };
 
