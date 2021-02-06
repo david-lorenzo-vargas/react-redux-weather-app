@@ -12,7 +12,7 @@ const getWidth = (countdown) => {
   return width;
 };
 
-const ProgressBar = ({countdown}) => {
+const ProgressBar = ({ countdown }) => {
   const barWidth = {
     width: `${getWidth(countdown)}%`,
   };
@@ -24,7 +24,7 @@ const ProgressBar = ({countdown}) => {
   );
 };
 
-ProgressBar.propTypes ={
+ProgressBar.propTypes = {
   countdown: PropTypes.number,
 };
 
