@@ -20,13 +20,13 @@ const Header = (props) => {
             <Time />
           </Column>
           <Column>
-            <Text text={`${roundNumbers(temperature.temp)} °C`} size="medium" color="white" />
+            <Text text={`${roundNumbers(temperature.temp)} °C`} size="large" color="white" />
           </Column>
         </Row>
       </Column>
       <Column>
         <Text text={`reloading in ${countdown}s`} size="small" color="white" />
-        <ProgressBar width={countdown} />
+        <ProgressBar countdown={countdown} />
       </Column>
     </div>
   );
