@@ -2,15 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Header, Forecast } from '@components';
 
-const WeatherApp = (props) => {
-  const {
-    fiveDayForecast,
-    fetchFiveDayStatus,
-    currentWeather,
-    fetchCurrentWeatherStatus,
-    countdown,
-  } = props;
-
+const WeatherApp = ({
+  fiveDayForecast,
+  fetchFiveDayStatus,
+  currentWeather,
+  fetchCurrentWeatherStatus,
+  countdown,
+}) => {
   const fiveDayHasData = fiveDayForecast && fetchFiveDayStatus === 'success' && !!fiveDayForecast.list.length;
 
   const currentHasData = currentWeather && fetchCurrentWeatherStatus === 'success';
