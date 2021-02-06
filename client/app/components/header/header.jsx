@@ -5,7 +5,7 @@ import styles from './header.scss';
 import { roundNumbers } from '../../utilities/round-numbers';
 import { Row, Column, Time, Text, ProgressBar } from '@components';
 
-const Header = ({temperature, city, countdown }) => (
+const Header = ({ temperature, city, countdown }) => (
   <div className={styles['header']}>
     <Column>
       <Row between>
