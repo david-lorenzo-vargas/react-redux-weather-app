@@ -20,7 +20,7 @@ const Header = (props) => {
             <Time />
           </Column>
           <Column>
-            <Text text={`${roundNumbers(temperature.temp)} °C`} size="large" color="white" />
+            <Text text={`${roundNumbers(temperature.temp)} °C`} size="large" color="white" type="temperature" />
           </Column>
         </Row>
       </Column>
