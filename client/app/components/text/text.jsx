@@ -22,7 +22,7 @@ const Text = (props) => {
       [`text--color-${color}`]: color,
       'text--uppercase': uppercase,
       'text--margin': margin,
-      'text--animated': type === 'temperature',
+      'text--animated': type === 'temperature' || type === 'day',
     })}
     >
       {text}
