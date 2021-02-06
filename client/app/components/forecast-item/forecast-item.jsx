@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { getDay } from '../../utilities/get-day';
 import { roundNumbers } from '../../utilities/round-numbers';
 
@@ -8,7 +9,6 @@ import styles from './forecast-item.scss';
 
 const ForecastItem = (props) => {
   const { timestamp, temperature, icon } = props;
-
 
   return (
     <div className={styles['weather-container']}>
@@ -48,5 +48,11 @@ const ForecastItem = (props) => {
     </div>
   );
 };
+
+ForecastItem.propTypes = {
+  timestamp: PropTypes.number,
+  temperature: PropTypes.number,
+  icon: PropTypes.string,
+}
 
 export default ForecastItem;
