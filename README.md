@@ -22,12 +22,12 @@ React, React Hooks, Redux state management, JavaScript, APIs, Async promises and
 ## Demo:
 1. First render: The current weather and the next five days forecast data fetched and displayed. A minute countdown starts together with the progress bar
 
-![weather app first render](https://user-images.githubusercontent.com/72414745/107150752-ad958900-695f-11eb-9330-59a99717cf8c.gif)
+![weather app first render](https://user-images.githubusercontent.com/72414745/107151453-f4d14900-6962-11eb-9047-83fcddd2fbde.gif)
 <br>
 
 2. After one minute: The information is refreshed and the countdown is reseted together with the progress bar
 
-![weather app refresh](https://user-images.githubusercontent.com/72414745/107150768-d3229280-695f-11eb-9ee1-768d30060635.gif)
+![weather app refresh](https://user-images.githubusercontent.com/72414745/107151534-627d7500-6963-11eb-907f-2e29a1185e82.gif)
 <br>
 
 ## Installation, viewing and testing
