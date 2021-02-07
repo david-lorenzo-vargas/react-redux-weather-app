@@ -14,7 +14,6 @@ This weather app consists of showing the current weater and the next five-day fo
 <br>
 Once one minute has passed, the current weather and the forecast are refreshed. The countdown and the progress bar also get restarted.
 <br>
-For the clock that is displayed, **react-live-clock** has been used and formated with **moment.js**
 
 ## Technologies:
 React, React Hooks, Redux state management, JavaScript, APIs, Async promises and fetch, TDD Testing(Jest), SCSS and CSS modules, CSS Animation (@keyframes), Dayjs, Moment.js, React-Live-Clock, Webpack, Babel, Eslint, Stylelint.
