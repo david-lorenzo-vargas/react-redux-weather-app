@@ -23,9 +23,9 @@ Five day forecast endpoint, provides an "object" with an "array" of "objects" wi
 2. Temperature `"temp": 8.7`
 3. Icon `"icon":"01d"`
 
-The "array" needs to be filtered to display just five day forecast with the Day, Temperature and Icon.
-As the days are received in `timestamps`, **Dayjs** library has been used to convert them into days.
-The temperature is posible to receive it in **Celcius** by adding to the API call `units=metric` or in **Fahrenheit** by adding to the API call `units=imperial`. Temperature in **Kelvin** is used by default, no need to use units parameter in API call.
+The "array" needs to be filtered to display just five day forecast with the Day, Temperature and Icon.<br>
+As the days are received in `timestamps`, **Dayjs** library has been used to convert them into days.<br>
+The temperature is posible to receive it in **Celcius** by adding to the API call `units=metric` or in **Fahrenheit** by adding to the API call `units=imperial`. Temperature in **Kelvin** is used by default, no need to use units parameter in API call.<br>
 The icon is received by an ID that needs to be coverted into an image by using `http://openweathermap.org/img/wn/10d.png` where “10d” is the icon id.
 
 For the clock that is displayed, **react-live-clock** has been used and formated with **moment.js**
