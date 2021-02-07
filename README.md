@@ -56,6 +56,7 @@ if the API call is "success" the information is displayed and a minute countdown
 </br>
 Five day forecast endpoint, provides an "object" with an "array" of "objects" with the forecast informaton for the next five days. For each day, the API provides the information for every 3 hours, which means that the response provides an "array" of 40 "objects" where it is posible to find:
 <br>
+
 1. Day: `"dt":1487246400`
 2. Temperature `"temp": 8.7`
 3. Icon `"icon":"01d"`
