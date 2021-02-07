@@ -11,7 +11,7 @@
 
 ## Description:
 This application consists on a weather app which shows the current weater and the next five day forecast for London. Once the application is rendered for the first time, the current waether and the forecast for the next five days is rendered on the page together with a minute countdown and a progress bar that shows how many secods are left for the next weather display.
-Once one minute has passed, the current weather and the forecast is refreshed. The countdown and the progress bar also restart.
+Once one minute has passed, the current weather and the forecast is refreshed. The countdown and the progress bar also get restarted.
 <br>
 For the clock that is displayed, **react-live-clock** has been used and formated with **moment.js**
 
