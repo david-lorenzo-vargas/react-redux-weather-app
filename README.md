@@ -13,6 +13,7 @@
 This application consists on a weather app which shows the current weater and the next five day forecast for London. Once the application is rendered for the first time, the information is fetched from two different API endpoints:
 1. Current weather: `api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}`
 2. Five day forecast: `api.openweathermap.org/data/2.5/forecast?q={city name}&appid={API key}`
+<br>
 if the API call is "success" the information is displayed and a minute countdown starts together with a progress bar.
 </br>
 </br>
