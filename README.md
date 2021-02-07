@@ -21,8 +21,14 @@ React, React Hooks, Redux state management, JavaScript, APIs, Async promises and
 
 ## Demo:
 1. First render: The current weather and the next five days forecast data fetched and displayed. A minute countdown starts together with the progress bar
+<br>
+![weather app first render](https://user-images.githubusercontent.com/72414745/107150752-ad958900-695f-11eb-9330-59a99717cf8c.gif)
+<br>
 
 2. After one minute: The information is refreshed and the countdown is reseted together with the progress bar
+<br>
+![weather app refresh](https://user-images.githubusercontent.com/72414745/107150768-d3229280-695f-11eb-9ee1-768d30060635.gif)
+<br>
 
 ## Installation, viewing and testing
 1. Clone the repo in your code editor
@@ -41,7 +47,7 @@ The first category contains components with their contents and styles rendered o
 **State** contains logic related to Redux store.
 
 ### API calls
-API enpoints are called with fetch() function GET method. the information is fetched from two different API endpoints:
+API enpoints are called with fetch() function GET method, the information is fetched from two different API endpoints:
 1. Current weather: `api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}`
 2. Five day forecast: `api.openweathermap.org/data/2.5/forecast?q={city name}&appid={API key}`
 <br>
@@ -49,7 +55,7 @@ if the API call is "success" the information is displayed and a minute countdown
 </br>
 </br>
 Five day forecast endpoint, provides an "object" with an "array" of "objects" with the forecast informaton for the next five days. For each day, the API provides the information for every 3 hours, which means that the response provides an "array" of 40 "objects" where it is posible to find:
-
+<br>
 1. Day: `"dt":1487246400`
 2. Temperature `"temp": 8.7`
 3. Icon `"icon":"01d"`
