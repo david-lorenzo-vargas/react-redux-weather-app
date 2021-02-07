@@ -59,7 +59,6 @@ API enpoints are called with fetch() function GET method.
 
 ### Testing
 TDD Testing has been implemented with **Jest** for testing a complex functionality inside Forecast component that needs to reduce a 40 item "array" into a 5 item "array" to display just the next five day forecast.</br></br>
-</br></br>
 
 ### Additional implementations
 In addition to current code of the app, I believe the following implementations would be beneficial:</br>
