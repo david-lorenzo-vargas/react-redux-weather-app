@@ -10,24 +10,8 @@
 
 
 ## Description:
-This application consists on a weather app which shows the current weater and the next five day forecast for London. Once the application is rendered for the first time, the information is fetched from two different API endpoints:
-1. Current weather: `api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}`
-2. Five day forecast: `api.openweathermap.org/data/2.5/forecast?q={city name}&appid={API key}`
+This application consists on a weather app which shows the current weater and the next five day forecast for London. Once the application is rendered for the first time, the current waether and the forecast for the next five days is rendered on the page together with a minute countdown and a progress bar that shows how many secods are left for the next weather display.
 <br>
-if the API call is "success" the information is displayed and a minute countdown starts together with a progress bar.
-</br>
-</br>
-Five day forecast endpoint, provides an "object" with an "array" of "objects" with the forecast informaton for the next five days. For each day, the API provides the information for every 3 hours, which means that the response provides an "array" of 40 "objects" where it is posible to find:
-
-1. Day: `"dt":1487246400`
-2. Temperature `"temp": 8.7`
-3. Icon `"icon":"01d"`
-
-The "array" needs to be filtered to display just five day forecast with the Day, Temperature and Icon.<br>
-As the days are received in `timestamps`, **Dayjs** library has been used to convert them into days.<br>
-The temperature is posible to receive it in **Celcius** by adding to the API call `units=metric` or in **Fahrenheit** by adding to the API call `units=imperial`. Temperature in **Kelvin** is used by default, no need to use units parameter in API call.<br>
-The icon is received by an ID that needs to be coverted into an image by using `http://openweathermap.org/img/wn/10d.png` where “10d” is the icon id.
-
 For the clock that is displayed, **react-live-clock** has been used and formated with **moment.js**
 
 ## Technologies:
@@ -55,7 +39,26 @@ The first category contains components with their contents and styles rendered o
 **State** contains logic related to Redux store.
 
 ### API calls
-API enpoints are called with fetch() function GET method.
+API enpoints are called with fetch() function GET method. the information is fetched from two different API endpoints:
+1. Current weather: `api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}`
+2. Five day forecast: `api.openweathermap.org/data/2.5/forecast?q={city name}&appid={API key}`
+<br>
+if the API call is "success" the information is displayed and a minute countdown starts together with a progress bar.
+</br>
+</br>
+Five day forecast endpoint, provides an "object" with an "array" of "objects" with the forecast informaton for the next five days. For each day, the API provides the information for every 3 hours, which means that the response provides an "array" of 40 "objects" where it is posible to find:
+
+1. Day: `"dt":1487246400`
+2. Temperature `"temp": 8.7`
+3. Icon `"icon":"01d"`
+
+The "array" needs to be filtered to display just five day forecast with the Day, Temperature and Icon.<br>
+As the days are received in `timestamps`, **Dayjs** library has been used to convert them into days.<br>
+The temperature is posible to receive it in **Celcius** by adding to the API call `units=metric` or in **Fahrenheit** by adding to the API call `units=imperial`. Temperature in **Kelvin** is used by default, no need to use units parameter in API call.<br>
+The icon is received by an ID that needs to be coverted into an image by using `http://openweathermap.org/img/wn/10d.png` where “10d” is the icon id.
+
+As the data is sotred in the **Redux** store, in case an API call is "reject" (apart from the first render as the Redux store is empty), the application will show the information of the last "succesfull" call.
+
 
 ### Testing
 TDD Testing has been implemented with **Jest** for testing a complex functionality inside Forecast component that needs to reduce a 40 item "array" into a 5 item "array" to display just the next five day forecast.</br></br>
