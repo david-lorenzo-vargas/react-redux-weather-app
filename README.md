@@ -16,7 +16,21 @@ Once one minute has passed, the current weather and the forecast are refreshed. 
 <br>
 
 ## Technologies:
-React, React Hooks, Redux state management, JavaScript, APIs, Async promises and fetch, TDD Testing(Jest), SCSS and CSS modules, CSS Animation (@keyframes), Dayjs, Moment.js, React-Live-Clock, Webpack, Babel, Eslint, Stylelint.
+
+<ul>
+  <li>React</li>
+  <li>React Hooks</li>
+  <li>Redux</li>
+  <li>JavaScript</li>
+  <li>REST API</li>
+  <li>Jest</li>
+  <li>SCSS</li>
+  <li>@keyframes</li>
+  <li>Dayjs</li>
+  <li>Moment.js</li>
+  <li>React-Live-Clock</li>
+  <li>Eslint</li>
+</ul>
 
 ## Demo:
 1. First render: The current weather and the next five days forecast data fetched and displayed. A minute countdown starts together with the progress bar
